@@ -1,0 +1,17 @@
+{
+    "name": "Refactoring.js",
+    "version": "0.0.1",
+    "description": "Port Java examples and base conceptions to JavaScript from the Martin Fowler's Refactoring book",
+    "devDependencies": {
+        "karma": "^0.12.23",
+        "karma-chrome-launcher": "^0.1.4",
+        "karma-mocha": "^0.1.9",
+        "karma-phantomjs-launcher": "^0.1.4",
+        "karma-sinon-expect": "^0.1.4",
+        "mocha": "^1.21.4"
+    },
+    "scripts": {
+        "test": "karma start",
+        "start": "karma start --no-single-run"
+    }
+}

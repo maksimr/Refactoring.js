@@ -1,9 +1,26 @@
 ![Refactoring](logo/refactoring-logo.png "Refactoring")
 
-This repository contain examples from
-excelent Martin Fowler's[0] book about *Refactoring*[1].
-Examples rewriten to JavaScript and explain base conceptions of *Refactoring*
-and how this conceptions applied to JavaScript.
+## Исходная программа
 
-- [0] [Martin Fowler](http://martinfowler.com/)
-- [1] [Refactoring: Improving the Design of Existing Code](http://martinfowler.com/books/refactoring.html)
+Пример программы очень прост. Она рассчитывает и выводит отчет об оплате клиентом услуг в магазине видеопроката.
+Программе сообщается, какие фильмы брал в прокате клиент и на какой срок. После этого она рассчитывает сумму платежа
+исходя из продолжительности проката и типа фильма.
+Фильмы бывают трех типов: обычные, детские и новинки. Помимо расчета суммы оплаты начиляются бонусы в зависимости
+от того, является ли фильм новым.
+
+Элементы системы представляются несколькими классами, показанными на диаграмме:
+
+
+```
+ ___________           ____________           ____________
+|           |         |            |         |            |
+|   Movie   |         |   Rental   |         |  Customer  |
+|___________|         |____________|         |____________|
+|           |         |            |         |            |
+| priceCode | <------ | daysRented | <------ |            |
+|___________|         |____________|         |____________|
+|           |         |            |         |            |
+|           |         |            |         |  Statement |
+|___________|         |____________|         |____________|
+
+```
